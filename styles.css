@@ -1,6 +1,6 @@
 /* Base Styles */
 :root {
-    --primary-color: #efdb00;
+    --primary-color: #6345cf;
     --secondary-color: #fffef5;
     --dark-color: #333;
     --light-color: #f4f4f4;
@@ -19,7 +19,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     color: var(--dark-color);
-    background-color: var(--secondary-color);
+    background: url('./background.png') no-repeat center center/cover;
     position: relative;
     min-height: 100vh;
     padding-bottom: 60px; /* Space for footer */
@@ -40,7 +40,7 @@ ul {
 }
 
 .container {
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -56,7 +56,6 @@ ul {
 #header {
     height: 100vh;
     width: 100%;
-    background: url('./background.png') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -73,7 +72,7 @@ ul {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    max-width: 1200px;
+    /* max-width: 1200px; */
     padding: 0 20px;
     gap: 40px;
 }
@@ -88,7 +87,6 @@ ul {
     max-width: 100%;
     height: auto;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
@@ -97,7 +95,6 @@ ul {
 }
 
 .profile-info {
-    flex: 1;
     color: var(--dark-color);
     position: relative;
 }
@@ -109,7 +106,7 @@ ul {
     color: var(--primary-color);
     line-height: 1.1;
     letter-spacing: -0.5px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(239, 219, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2), 0px 0px 100px rgba(239, 219, 0, 0.3);
 }
 
 .profile-info h2 {
@@ -323,7 +320,7 @@ ul {
     display: flex;
     align-items: center;
     gap: 3rem;
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin: 0 auto;
     padding: 0 20px;
 }
