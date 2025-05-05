@@ -22,8 +22,10 @@
 - Updated footer with copyright information
 
 ## Additional Improvements
-- Added hover effects to social media links
+- Added enhanced text shadow to the heading (h1 tag) for better visual impact
+- Arranged social media links horizontally on larger screens and vertically on mobile
+- Added hover effects with subtle elevation and background to social media links
 - Enhanced typography with better spacing and hierarchy
-- Created mobile-responsive layout that adapts to different screen sizes
+- Created fully responsive layout that adapts to different screen sizes
 - Added subtle animations to improve user experience
 - Simplified page structure for cleaner presentation

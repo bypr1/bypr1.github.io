@@ -6,12 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
   
   socialLinks.forEach(link => {
     link.addEventListener('mouseenter', () => {
-      link.querySelector('i').style.transform = 'scale(1.2) rotate(5deg)';
+      link.querySelector('i').style.transform = 'scale(1.2)';
       link.querySelector('i').style.transition = 'transform 0.3s ease';
     });
     
     link.addEventListener('mouseleave', () => {
-      link.querySelector('i').style.transform = 'scale(1) rotate(0deg)';
+      link.querySelector('i').style.transform = 'scale(1)';
     });
   });
 });

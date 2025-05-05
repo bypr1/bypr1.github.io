@@ -109,7 +109,7 @@ ul {
     color: var(--primary-color);
     line-height: 1.1;
     letter-spacing: -0.5px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(239, 219, 0, 0.3);
 }
 
 .profile-info h2 {
@@ -133,7 +133,8 @@ ul {
 
 .social-links {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 15px;
     margin-top: 20px;
 }
@@ -145,13 +146,17 @@ ul {
     font-size: 1.2rem;
     color: var(--dark-color);
     transition: all 0.3s ease;
-    padding: 8px 0;
+    padding: 8px 12px;
     position: relative;
+    margin-right: 10px;
 }
 
 .social-links a:hover {
     color: var(--primary-color);
-    transform: translateX(5px);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
 }
 
 .social-links a i {
@@ -656,12 +661,14 @@ footer {
     }
 
     .social-links {
+        flex-direction: column;
         align-items: center;
         margin-top: 30px;
     }
     
     .social-links a {
         justify-content: center;
+        margin-right: 0;
     }
     
     .social-links a:hover {
