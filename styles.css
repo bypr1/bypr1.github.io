@@ -640,7 +640,13 @@ footer {
 
     .profile-image {
         margin-bottom: 30px;
-        max-width: 80%;
+        max-width: 60%;
+        transition: all 0.3s ease;
+    }
+    
+    .profile-image img {
+        border-radius: 25px;
+        transition: all 0.3s ease;
     }
 
     .profile-info h1 {
@@ -688,7 +694,19 @@ footer {
     }
     
     .profile-image {
-        max-width: 90%;
+        max-width: 70%;
+        position: relative;
+        margin-bottom: -100px;
+        margin-top: -100px;
+    }
+    
+    .profile-image img {
+        border-radius: 50%;
+        clip-path: circle(40% at 50% 35%);
+    }
+    
+    .profile-image img:hover {
+        transform: scale(1.05);
     }
 }
 
