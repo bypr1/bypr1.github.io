@@ -366,11 +366,11 @@ footer {
     .profile-image {
         max-width: 70%;
         position: relative;
-        margin-bottom: -100px;
+        margin-bottom: -50px;
     }
     
     .profile-image img {
-        border-radius: 50%;
+        border-radius: 40%;
         clip-path: circle(40% at 50% 35%);
     }
     
