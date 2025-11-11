@@ -1,9 +1,9 @@
 /* Base Styles */
 :root {
-    --primary-color: #ffdd00;
-    --secondary-color: #3c00ff;
-    --dark-color: #333;
-    --light-color: #f4f4f4;
+    --primary-color: #64b5f6;
+    --secondary-color: #c8e6ff;
+    --dark-color: #ffffff;
+    --light-color: #050d14;
 }
 
 * {
@@ -16,10 +16,10 @@ body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     color: var(--dark-color);
-    background: url('./background2.png') no-repeat center center/cover;
+    background-color: var(--light-color);
     position: relative;
-    min-height: 100vh;
-    padding-bottom: 60px; /* Space for footer */
+    margin: 0;
+    padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -39,6 +39,99 @@ ul {
 .container {
     margin: 0 auto;
     padding: 0 20px;
+}
+
+/* Hero Section */
+#hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -2;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 80px;
+    z-index: 1;
+}
+
+.hero-content {
+    text-align: right;
+    color: white;
+    z-index: 2;
+    animation: heroFadeIn 2s ease-in-out, heroFloat 3s ease-in-out infinite;
+    max-width: 550px;
+    font-family: 'Orbitron', cursive;
+}
+
+.hero-content h1 {
+    font-size: 8rem;
+    font-weight: 700;
+    font-family: 'Orbitron', cursive;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+}
+
+.hero-content p {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+@keyframes heroFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Main Content Section */
+#main {
+    background: linear-gradient(to top, #050d14, #050d14 80%, transparent);
+    min-height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 60px;
+    margin-top: -250px;
+    position: relative;
 }
 
 /* Header Section */
@@ -156,25 +249,7 @@ footer {
     color: var(--dark-color);
     padding: 1.5rem 0;
     margin-top: 2rem;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
-.copyright {
-    text-align: center;
-    font-size: 0.9rem;
-    opacity: 0.8;
-}
-
-/* Footer */
-footer {
-    background-color: rgba(0, 0, 0, 0.05);
-    color: var(--dark-color);
-    padding: 1.5rem 0;
-    margin-top: 2rem;
-    position: absolute;
-    bottom: 0;
+    position: relative;
     width: 100%;
 }
 
@@ -186,6 +261,26 @@ footer {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
+    .hero-overlay {
+        background: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        padding-right: 0;
+        padding: 0 20px;
+    }
+    
+    .hero-content {
+        text-align: center;
+        max-width: none;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
     #header {
         height: auto;
         min-height: 100vh;
@@ -241,6 +336,21 @@ footer {
 
 /* Additional Media Queries */
 @media screen and (max-width: 480px) {
+    .hero-overlay {
+        background: rgba(0, 0, 0, 0.6);
+        padding: 0 15px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
     .profile-info h1 {
         font-size: 1.8rem;
     }
